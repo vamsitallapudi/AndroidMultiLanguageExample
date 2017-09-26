@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">एकाधिक भाषाओं का समर्थन उदाहरण</string>
+
+
+    <string name="action_settings">सेटिंग्स</string>
+    <string name="nav_import">आयात</string>
+    <string name="nav_gallery">गेलरी</string>
+    <string name="nav_slideshow">स्लाइड शो</string>
+    <string name="nav_tools">उपकरण</string>
+    <string name="nav_communicate">संवाद</string>
+    <string name="nav_share">शेयर</string>
+    <string name="nav_send">भेजना</string>
+
+    <string name="tv_text">नमस्कार वम्सी! मेरे ऐप में आपका स्वागत है</string>
+
+    <string name="user_name">वम्सी ताल्लापुदी</string>
+    <string name="user_email">vamsi@coderefer.com</string>
+
+</resources>
