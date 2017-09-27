@@ -55,6 +55,8 @@ public class MainActivity extends AppCompatActivity
         toggle.syncState();
 
         setTitle(R.string.app_name);
+
+//        Fetching sharedpreferences to get Locale stored in them
         SharedPreferences sp = getSharedPreferences(LOCALE_PREF_KEY, MODE_PRIVATE);
         String localeString = sp.getString(LOCALE_KEY, ENGLISH_LOCALE);
         setupImageBasedOnLocale(localeString);
@@ -64,6 +66,7 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
     }
 
+//Swap images based on Locale
     private void setupImageBasedOnLocale(String localeString) {
         ivWelcome = (ImageView) findViewById(R.id.iv_welcome);
         if(localeString.equals(HINDI_LOCALE)){
@@ -99,7 +102,8 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_language) {
+//            Modifying Locale if User clicked language from options pane
             Resources resources = getResources();
             SharedPreferences sharedPreferences = getSharedPreferences("localePref", MODE_PRIVATE);
             SharedPreferences.Editor editor = sharedPreferences.edit();
@@ -129,7 +133,7 @@ public class MainActivity extends AppCompatActivity
         SharedPreferences sharedPreferences = getSharedPreferences("localePref", MODE_PRIVATE);
 
         MenuItem item = menu.getItem(0);
-        if(sharedPreferences.getString(LOCALE_KEY, "en_US").equals(HINDI_LOCALE)){
+        if(sharedPreferences.getString(LOCALE_KEY, ENGLISH_LOCALE).equals(HINDI_LOCALE)){
             item.setTitle("English");
         } else {
             item.setTitle("Hindi");
